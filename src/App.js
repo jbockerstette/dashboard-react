@@ -1,19 +1,24 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import avatar from './uxceo-128.jpg';
 import './App.css';
+import Avatar from './components/views/Avatar';
 
 class App extends Component {
+  componentDidMount() {}
+
   render() {
     return (
-      <div className="App">
+      <div className="App-grid">
+        <img src={logo} className="App-logo" alt="logo" />
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h4 className="App-title">My dashboard</h4>
+          <h5 className="App-subtitle">Welcome to Otis payment portal</h5>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <div>hi</div>
+        <div>
+          <Avatar src={avatar} alt="Avatar" />
+          <span className="App-title">Hello Debra</span>
+        </div>
       </div>
     );
   }
