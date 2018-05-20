@@ -1,19 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Avatar.css';
+import './Icon.css';
 
-const Avatar = props => {
+const Icon = props => {
   const { src, alt } = props;
   return (
-    <div className="Avatar">
-      <img src={src} className="Avatar__img" alt={alt} />
+    <div className="Icon">
+      <img src={src} className="Icon__img" alt={alt} />
     </div>
   );
 };
 
-Avatar.propTypes = {
+Icon.propTypes = {
   src: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired
 };
 
-export default Avatar;
+export default Icon;

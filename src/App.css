@@ -1,4 +1,5 @@
 .App-grid {
+  margin: 1em;
   display: grid;
   grid-template-columns: auto 1fr auto;
   grid-template-rows: auto 1fr;
@@ -11,17 +12,14 @@
   height: 80px;
 }
 
+.App-menu {
+  height: 48px;
+}
+
 .App-header {
   height: 64px;
 }
 
 .App-intro {
   font-size: large;
-}
-
-.App-title {
-  /* display: inline; */
-  color: wheat;
-  /* vertical-align: center; */
-  /* text-align: center; */
 }

@@ -1,9 +1,8 @@
-.Avatar {
+.Icon {
   display: inline;
   padding: 8px;
 }
-.Avatar__img {
-  height: 64px;
-  border-radius: 50%;
+.Icon__img {
+  height: 48px;
   vertical-align: middle;
 }

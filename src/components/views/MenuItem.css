@@ -1,0 +1,15 @@
+.Menu-item {
+  /* background-color: #eee; */
+  /* color: black; */
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.Menu-item:hover {
+  background-color: #ccc;
+}
+
+.Menu-item.active {
+  color: white;
+}

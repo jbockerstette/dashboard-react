@@ -23,7 +23,7 @@ Text.propTypes = {
 };
 
 Text.defaultProps = {
-  htmlTag: 'h1',
+  htmlTag: 'span',
   color: 'primary'
 };
 
