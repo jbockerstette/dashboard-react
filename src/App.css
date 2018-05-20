@@ -13,19 +13,15 @@
 
 .App-header {
   height: 64px;
-  color: #fdfdfe;
-}
-
-.App-title {
-  padding: 8px;
-  margin: 0;
-}
-
-.App-subtitle {
-  padding: 8px;
-  margin: 0;
 }
 
 .App-intro {
   font-size: large;
+}
+
+.App-title {
+  /* display: inline; */
+  color: wheat;
+  /* vertical-align: center; */
+  /* text-align: center; */
 }

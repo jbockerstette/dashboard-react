@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import avatar from './uxceo-128.jpg';
 import './App.css';
 import Avatar from './components/views/Avatar';
+import Text from './components/views/Text';
 
 class App extends Component {
   componentDidMount() {}
@@ -12,12 +13,14 @@ class App extends Component {
       <div className="App-grid">
         <img src={logo} className="App-logo" alt="logo" />
         <header className="App-header">
-          <h4 className="App-title">My dashboard</h4>
-          <h5 className="App-subtitle">Welcome to Otis payment portal</h5>
+          <Text htmlTag="h4">My dashboard</Text>
+          <Text htmlTag="h5" color="secondary">
+            Welcome to Otis payment portal
+          </Text>
         </header>
-        <div>
+        <div className="App-title">
+          <span>Hello Debra</span>
           <Avatar src={avatar} alt="Avatar" />
-          <span className="App-title">Hello Debra</span>
         </div>
       </div>
     );

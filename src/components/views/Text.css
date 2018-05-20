@@ -1,0 +1,16 @@
+.Text-title {
+  padding: 8px;
+  margin: 0;
+}
+
+.Text--primary {
+  color: #fdfdfe;
+}
+
+.Text--secondary {
+  color: #d6dde6;
+}
+
+.Text--disabled {
+  color: #565d70;
+}
