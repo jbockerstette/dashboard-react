@@ -1,15 +1,14 @@
 .Menu-item {
-  /* background-color: #eee; */
-  /* color: black; */
+  color: var(--disabled-txt-color);
   display: block;
   padding: 12px;
   text-decoration: none;
 }
 
 .Menu-item:hover {
-  background-color: #ccc;
+  color: var(--secondary-txt-color);
 }
 
 .Menu-item.active {
-  color: white;
+  color: var(--primary-txt-color);
 }

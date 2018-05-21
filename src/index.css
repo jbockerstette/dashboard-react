@@ -1,6 +1,14 @@
+:root {
+  --primary-bg-color: #333b4e;
+  --primary-txt-color: #fdfefd;
+  --secondary-txt-color: #d6dde6;
+  --disabled-txt-color: #a7b1cc;
+  --main-padding: 8px;
+}
+
 html {
   box-sizing: border-box;
-  background: #333b4e;
+  background: var(--primary-bg-color);
 }
 
 *,

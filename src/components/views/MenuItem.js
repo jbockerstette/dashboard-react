@@ -9,7 +9,9 @@ const MenuItem = props => {
   return (
     <div className="Menu-item">
       <Icon src={iconSrc} alt="menu" />
-      <Text>{text}</Text>
+      <Text htmlTag="span" color="inherit">
+        {text}
+      </Text>
     </div>
   );
 };

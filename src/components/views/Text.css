@@ -4,13 +4,17 @@
 }
 
 .Text--primary {
-  color: #fdfdfe;
+  color: var(--primary-txt-color);
 }
 
 .Text--secondary {
-  color: #d6dde6;
+  color: var(--secondary-txt-color);
 }
 
 .Text--disabled {
-  color: #565d70;
+  color: var(--disabled-txt-color);
+}
+
+.Text--inherit {
+  color: inherit;
 }

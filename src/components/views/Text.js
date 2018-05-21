@@ -5,7 +5,8 @@ import './Text.css';
 const colorClass = {
   primary: 'Text--primary',
   secondary: 'Text--secondary',
-  disabled: 'Text--disabled'
+  disabled: 'Text--disabled',
+  inherit: 'Text--inherit'
 };
 
 const Text = props => {
@@ -19,7 +20,7 @@ const Text = props => {
 Text.propTypes = {
   children: PropTypes.node.isRequired,
   htmlTag: PropTypes.string,
-  color: PropTypes.oneOf(['primary', 'secondary', 'disabled'])
+  color: PropTypes.oneOf(['primary', 'secondary', 'disabled', 'inherit'])
 };
 
 Text.defaultProps = {
