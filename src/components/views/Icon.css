@@ -1,8 +1,7 @@
 .Icon {
-  display: inline;
   padding: 8px;
 }
 .Icon__img {
-  height: 48px;
+  display: inherit;
   vertical-align: middle;
 }

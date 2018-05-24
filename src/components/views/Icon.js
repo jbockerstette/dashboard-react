@@ -5,9 +5,11 @@ import './Icon.css';
 const Icon = props => {
   const { src, alt } = props;
   return (
-    <div className="Icon">
-      <img src={src} className="Icon__img" alt={alt} />
-    </div>
+    <span className="Icon">
+      <i className="material-icons Icon__img" style={{ color: 'red' }}>
+        {src}
+      </i>
+    </span>
   );
 };
 

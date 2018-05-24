@@ -1,6 +1,5 @@
 .Menu-item {
   color: var(--disabled-txt-color);
-  display: block;
   padding: 12px;
   text-decoration: none;
 }

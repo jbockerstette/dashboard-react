@@ -1,11 +1,5 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import iconDashboard from './assets/baseline-dashboard-24px.svg';
-import iconAccount from './assets/baseline-account_box-24px.svg';
-import iconMobile from './assets/baseline-smartphone-24px.svg';
-import iconBills from './assets/baseline-event_note-24px.svg';
-import iconComplaints from './assets/baseline-message-24px.svg';
-import iconCustormerCare from './assets/baseline-phone-24px.svg';
 import avatar from './uxceo-128.jpg';
 import './App.css';
 import Avatar from './components/views/Avatar';
@@ -32,15 +26,15 @@ class App extends Component {
         </div>
         <Menu>
           <MenuItem
-            iconSrc={iconDashboard}
+            iconSrc="dashboard"
             text="My dashboard"
             onClick={() => console.log('hi')}
           />
-          <MenuItem iconSrc={iconAccount} text="Accounts" />
-          <MenuItem iconSrc={iconMobile} text="Mobile" />
-          <MenuItem iconSrc={iconBills} text="Bills" />
-          <MenuItem iconSrc={iconComplaints} text="Complaints" />
-          <MenuItem iconSrc={iconCustormerCare} text="Customer Care" />
+          <MenuItem iconSrc="account_box" text="Accounts" />
+          <MenuItem iconSrc="smartphone" text="Mobile" />
+          <MenuItem iconSrc="event_note" text="Bills" />
+          <MenuItem iconSrc="message" text="Complaints" />
+          <MenuItem iconSrc="phone" text="Customer Care" />
         </Menu>
         <div className="Dashboard">hi</div>
       </div>
