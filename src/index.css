@@ -1,5 +1,7 @@
 :root {
   --primary-bg-color: #333b4e;
+  --dialog-bg-color: #414b618e;
+  --panel-bg-color: #282f3d8e;
   --primary-txt-color: #fdfefd;
   --secondary-txt-color: #d6dde6;
   --disabled-txt-color: #a7b1cc;

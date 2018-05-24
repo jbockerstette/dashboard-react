@@ -5,9 +5,9 @@ import Text from './Text';
 import './MenuItem.css';
 
 const MenuItem = props => {
-  const { iconSrc, text } = props;
+  const { iconSrc, text, onClick } = props;
   return (
-    <div className="Menu-item">
+    <div className="Menu-item" onClick={onClick} role="menu">
       <Icon src={iconSrc} alt="menu" />
       <Text htmlTag="span" color="inherit">
         {text}
@@ -18,11 +18,13 @@ const MenuItem = props => {
 
 MenuItem.propTypes = {
   iconSrc: PropTypes.string.isRequired,
-  text: PropTypes.string
+  text: PropTypes.string,
+  onClick: PropTypes.func
 };
 
 MenuItem.defaultProps = {
-  text: ''
+  text: '',
+  onClick: null
 };
 
 export default MenuItem;

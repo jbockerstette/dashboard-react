@@ -31,13 +31,18 @@ class App extends Component {
           <Text>Hello Debra</Text>
         </div>
         <Menu>
-          <MenuItem iconSrc={iconDashboard} text="My dashboard" />
+          <MenuItem
+            iconSrc={iconDashboard}
+            text="My dashboard"
+            onClick={() => console.log('hi')}
+          />
           <MenuItem iconSrc={iconAccount} text="Accounts" />
           <MenuItem iconSrc={iconMobile} text="Mobile" />
           <MenuItem iconSrc={iconBills} text="Bills" />
           <MenuItem iconSrc={iconComplaints} text="Complaints" />
           <MenuItem iconSrc={iconCustormerCare} text="Customer Care" />
         </Menu>
+        <div className="Dashboard">hi</div>
       </div>
     );
   }
