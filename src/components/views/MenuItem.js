@@ -5,10 +5,18 @@ import Text from './Text';
 import './MenuItem.css';
 
 const MenuItem = props => {
-  const { iconSrc, text, onClick } = props;
+  const { iconSrc, text, onClick, selected } = props;
   return (
-    <div className="Menu-item" onClick={onClick} role="menu">
-      <Icon src={iconSrc} alt="menu" />
+    <div
+      className={`Menu-item  ${selected ? 'selected' : ''}`}
+      onClick={onClick}
+      role="menu"
+    >
+      <Icon
+        iconClass={`Menu-item-icon  ${selected ? 'selected' : ''}`}
+        src={iconSrc}
+        alt="menu"
+      />
       <Text htmlTag="span" color="inherit">
         {text}
       </Text>
@@ -19,12 +27,14 @@ const MenuItem = props => {
 MenuItem.propTypes = {
   iconSrc: PropTypes.string.isRequired,
   text: PropTypes.string,
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+  selected: PropTypes.bool
 };
 
 MenuItem.defaultProps = {
   text: '',
-  onClick: null
+  onClick: null,
+  selected: false
 };
 
 export default MenuItem;

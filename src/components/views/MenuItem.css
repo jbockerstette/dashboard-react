@@ -2,12 +2,25 @@
   color: var(--disabled-txt-color);
   padding: 12px;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .Menu-item:hover {
   color: var(--secondary-txt-color);
 }
 
-.Menu-item.active {
+.Menu-item.selected {
   color: var(--primary-txt-color);
+}
+
+.Menu-item-icon {
+  background: var(--disabled-txt-color);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.Menu-item-icon.selected {
+  background: linear-gradient(to bottom, #e72c83 0%, #a742c6 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

@@ -1,7 +1,5 @@
 .Icon {
+  display: inline-block;
   padding: 8px;
-}
-.Icon__img {
-  display: inherit;
   vertical-align: middle;
 }

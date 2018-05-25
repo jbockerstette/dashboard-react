@@ -8,7 +8,16 @@ import Menu from './components/views/Menu';
 import MenuItem from './components/views/MenuItem';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { selection: 'My dashboard' };
+    this.handleMenuSelected = this.handleMenuSelected.bind(this);
+  }
   componentDidMount() {}
+  handleMenuSelected(id) {
+    this.setState({ selection: id });
+    console.log(id);
+  }
 
   render() {
     return (
@@ -24,12 +33,9 @@ class App extends Component {
           <Avatar src={avatar} alt="Avatar" />
           <Text>Hello Debra</Text>
         </div>
-        <Menu>
-          <MenuItem
-            iconSrc="dashboard"
-            text="My dashboard"
-            onClick={() => console.log('hi')}
-          />
+
+        <Menu onClick={this.handleMenuSelected}>
+          <MenuItem iconSrc="dashboard" text="My dashboard" />
           <MenuItem iconSrc="account_box" text="Accounts" />
           <MenuItem iconSrc="smartphone" text="Mobile" />
           <MenuItem iconSrc="event_note" text="Bills" />
