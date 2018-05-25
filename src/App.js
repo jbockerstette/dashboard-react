@@ -6,10 +6,7 @@ import Avatar from './components/views/Avatar';
 import Text from './components/views/Text';
 import Menu from './components/views/Menu';
 import MenuItem from './components/views/MenuItem';
-import Icon from './components/views/Icon';
-import IconButton from './components/views/IconButton';
-import TitleBar from './components/views/TitleBar';
-import Panel from './components/views/Panel';
+import Accounts from './components/containers/Accounts';
 
 class App extends Component {
   constructor(props) {
@@ -48,11 +45,7 @@ class App extends Component {
         </Menu>
         <div className="App-content">
           <div className="App-content-grid">
-            <div>
-              <Panel>
-                <TitleBar>My Accounts</TitleBar>
-              </Panel>
-            </div>
+            <Accounts />
             <div>panel 2</div>
             <div>panel 3</div>
             <div>panel 4</div>

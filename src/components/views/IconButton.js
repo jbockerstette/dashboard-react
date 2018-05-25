@@ -29,7 +29,7 @@ IconButton.propTypes = {
 
 IconButton.defaultProps = {
   onClick: null,
-  iconSrc: PropTypes.string,
+  iconSrc: '',
   color: 'grey'
 };
 

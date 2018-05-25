@@ -18,3 +18,7 @@
 .Text--inherit {
   color: inherit;
 }
+
+.Text--small {
+  font-size: small;
+}

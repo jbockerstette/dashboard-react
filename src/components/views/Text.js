@@ -10,8 +10,8 @@ const colorClass = {
 };
 
 const Text = props => {
-  const { htmlTag, children, color } = props;
-  const cname = `Text-title ${colorClass[color]}`;
+  const { htmlTag, children, color, small } = props;
+  const cname = `Text-title ${colorClass[color]} ${small ? 'Text--small' : ''}`;
   const Component = htmlTag;
 
   return <Component className={cname}>{children}</Component>;
@@ -20,12 +20,14 @@ const Text = props => {
 Text.propTypes = {
   children: PropTypes.node.isRequired,
   htmlTag: PropTypes.string,
-  color: PropTypes.oneOf(['primary', 'secondary', 'disabled', 'inherit'])
+  color: PropTypes.oneOf(['primary', 'secondary', 'disabled', 'inherit']),
+  small: PropTypes.bool
 };
 
 Text.defaultProps = {
   htmlTag: 'span',
-  color: 'primary'
+  color: 'primary',
+  small: false
 };
 
 export default Text;
