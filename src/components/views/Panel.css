@@ -1,0 +1,8 @@
+.Panel {
+  grid-gap: 2em;
+  justify-self: stretch;
+  align-self: stretch;
+  border-radius: 25px;
+  background: var(--panel-bg-color);
+  padding: 1em;
+}

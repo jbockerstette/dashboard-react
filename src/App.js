@@ -8,6 +8,8 @@ import Menu from './components/views/Menu';
 import MenuItem from './components/views/MenuItem';
 import Icon from './components/views/Icon';
 import IconButton from './components/views/IconButton';
+import TitleBar from './components/views/TitleBar';
+import Panel from './components/views/Panel';
 
 class App extends Component {
   constructor(props) {
@@ -47,16 +49,10 @@ class App extends Component {
         <div className="App-content">
           <div className="App-content-grid">
             <div>
-              <div className="Panel">
-                <div className="Title-bar">
-                  <Text>My accounts</Text>
-                  <Icon src="search" />
-                  <IconButton iconSrc="filter_list">Filter by</IconButton>
-                  <div className="Title-bar-line" />
-                </div>
-              </div>
+              <Panel>
+                <TitleBar>My Accounts</TitleBar>
+              </Panel>
             </div>
-
             <div>panel 2</div>
             <div>panel 3</div>
             <div>panel 4</div>
