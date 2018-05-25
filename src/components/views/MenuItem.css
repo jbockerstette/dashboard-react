@@ -3,6 +3,7 @@
   padding: 12px;
   text-decoration: none;
   cursor: pointer;
+  list-style: none;
 }
 
 .Menu-item:hover {

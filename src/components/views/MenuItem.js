@@ -7,7 +7,7 @@ import './MenuItem.css';
 const MenuItem = props => {
   const { iconSrc, text, onClick, selected } = props;
   return (
-    <div
+    <li
       className={`Menu-item  ${selected ? 'selected' : ''}`}
       onClick={onClick}
       role="menu"
@@ -20,7 +20,7 @@ const MenuItem = props => {
       <Text htmlTag="span" color="inherit">
         {text}
       </Text>
-    </div>
+    </li>
   );
 };
 

@@ -21,7 +21,7 @@ class Menu extends Component {
     const { selected } = this.state;
 
     return (
-      <div className="Menu">
+      <ul className="Menu">
         {React.Children.map(children, child => {
           const { text } = child.props;
           return React.cloneElement(child, {
@@ -29,7 +29,7 @@ class Menu extends Component {
             selected: selected === text
           });
         })}
-      </div>
+      </ul>
     );
   }
 }
