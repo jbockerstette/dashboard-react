@@ -6,6 +6,8 @@ import Avatar from './components/views/Avatar';
 import Text from './components/views/Text';
 import Menu from './components/views/Menu';
 import MenuItem from './components/views/MenuItem';
+import Icon from './components/views/Icon';
+import IconButton from './components/views/IconButton';
 
 class App extends Component {
   constructor(props) {
@@ -42,7 +44,24 @@ class App extends Component {
           <MenuItem iconSrc="message" text="Complaints" />
           <MenuItem iconSrc="phone" text="Customer Care" />
         </Menu>
-        <div className="Dashboard">hi</div>
+        <div className="App-content">
+          <div className="App-content-grid">
+            <div>
+              <div className="Panel">
+                <div className="Title-bar">
+                  <Text>My accounts</Text>
+                  <Icon src="search" />
+                  <IconButton iconSrc="filter_list">Filter by</IconButton>
+                  <div className="Title-bar-line" />
+                </div>
+              </div>
+            </div>
+
+            <div>panel 2</div>
+            <div>panel 3</div>
+            <div>panel 4</div>
+          </div>
+        </div>
       </div>
     );
   }

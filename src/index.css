@@ -1,7 +1,8 @@
 :root {
   --primary-bg-color: #333b4e;
-  --dialog-bg-color: #414b618e;
-  --panel-bg-color: #282f3d8e;
+  --panel-bg-color: #333b4e8e;
+  --content-bg-color: #282f3d8e;
+  --filter-bg-color: #485264;
   --primary-txt-color: #fdfefd;
   --secondary-txt-color: #d6dde6;
   --disabled-txt-color: #a7b1cc;
@@ -11,6 +12,7 @@
 html {
   box-sizing: border-box;
   background: var(--primary-bg-color);
+  color: var(--primary-txt-color);
 }
 
 *,

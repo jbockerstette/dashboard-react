@@ -1,0 +1,28 @@
+.Btn {
+  border-radius: 32px;
+  border: 0;
+  margin: 0px;
+}
+
+.Btn--grey {
+  background: var(--filter-bg-color);
+  color: var(--secondar-txt-color);
+}
+
+.Btn--red {
+  background: linear-gradient(
+    to bottom right,
+    rgb(255, 245, 104) 0%,
+    rgb(255, 84, 113) 100%
+  );
+  color: var(--secondar-txt-color);
+}
+
+.Btn--green {
+  background: linear-gradient(
+    to bottom right,
+    rgb(255, 245, 104) 0%,
+    rgb(70, 150, 50) 100%
+  );
+  color: var(--secondar-txt-color);
+}

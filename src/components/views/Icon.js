@@ -4,6 +4,9 @@ import './Icon.css';
 
 const Icon = props => {
   const { src, iconClass } = props;
+  if (src === '') {
+    return null;
+  }
   return (
     <span className="Icon">
       <i className={`material-icons ${iconClass}`}>{src}</i>
@@ -12,12 +15,13 @@ const Icon = props => {
 };
 
 Icon.propTypes = {
-  src: PropTypes.string.isRequired,
+  src: PropTypes.string,
   iconClass: PropTypes.string
 };
 
 Icon.defaultProps = {
-  iconClass: ''
+  iconClass: '',
+  src: ''
 };
 
 export default Icon;

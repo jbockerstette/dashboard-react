@@ -1,0 +1,36 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import Icon from './Icon';
+import './IconButton.css';
+
+const colorClass = {
+  grey: 'Btn--grey',
+  red: 'Btn--red',
+  green: 'Btn--green',
+  inherit: 'Btn--inherit'
+};
+
+const IconButton = props => {
+  const { iconSrc, children, color } = props;
+  const cname = `Btn ${colorClass[color]}`;
+  return (
+    <button className={cname}>
+      <Icon src={iconSrc} />
+      {children}
+    </button>
+  );
+};
+
+IconButton.propTypes = {
+  iconSrc: PropTypes.string,
+  onClick: PropTypes.func,
+  color: PropTypes.oneOf(['grey', 'red', 'green', 'inherit'])
+};
+
+IconButton.defaultProps = {
+  onClick: null,
+  iconSrc: PropTypes.string,
+  color: 'grey'
+};
+
+export default IconButton;
