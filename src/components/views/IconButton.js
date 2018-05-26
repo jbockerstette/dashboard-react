@@ -14,10 +14,12 @@ const IconButton = props => {
   const { iconSrc, children, color, onClick } = props;
   const cname = `Btn ${colorClass[color]}`;
   return (
-    <button className={cname} onClick={onClick}>
-      <Icon src={iconSrc} />
-      {children}
-    </button>
+    <div>
+      <button className={cname} onClick={onClick}>
+        <Icon src={iconSrc} />
+        {children}
+      </button>
+    </div>
   );
 };
 

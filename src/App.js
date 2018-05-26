@@ -7,6 +7,7 @@ import Text from './components/views/Text';
 import Menu from './components/views/Menu';
 import MenuItem from './components/views/MenuItem';
 import Accounts from './components/containers/Accounts';
+import Bills from './components/containers/Bills';
 
 class App extends Component {
   constructor(props) {
@@ -47,7 +48,7 @@ class App extends Component {
           <div className="App-content-grid">
             <Accounts />
             <div>panel 2</div>
-            <div>panel 3</div>
+            <Bills />
             <div>panel 4</div>
           </div>
         </div>
