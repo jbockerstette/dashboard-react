@@ -11,10 +11,10 @@ const colorClass = {
 };
 
 const IconButton = props => {
-  const { iconSrc, children, color } = props;
+  const { iconSrc, children, color, onClick } = props;
   const cname = `Btn ${colorClass[color]}`;
   return (
-    <button className={cname}>
+    <button className={cname} onClick={onClick}>
       <Icon src={iconSrc} />
       {children}
     </button>
