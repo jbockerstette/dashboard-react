@@ -8,6 +8,7 @@ import Menu from './components/views/Menu';
 import MenuItem from './components/views/MenuItem';
 import Accounts from './components/containers/Accounts';
 import Bills from './components/containers/Bills';
+import Profile from './components/containers/Profile';
 
 class App extends Component {
   constructor(props) {
@@ -46,10 +47,15 @@ class App extends Component {
         </Menu>
         <div className="App-content">
           <div className="App-content-grid">
-            <Accounts />
-            <div>panel 2</div>
-            <Bills />
-            <div>panel 4</div>
+            <div className="App-dashboard-accounts">
+              <Accounts />
+            </div>
+            <div className="App-dashboard-bills">
+              <Bills />
+            </div>
+            <div className="App-dashboard-profile">
+              <Profile />
+            </div>
           </div>
         </div>
       </div>

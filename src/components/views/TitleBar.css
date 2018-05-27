@@ -1,13 +1,5 @@
 .Title-bar {
   display: grid;
-  grid-template-columns: 1fr auto auto;
+  grid-template-columns: 1fr;
   align-items: center;
-}
-
-.Title-bar-line {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  align-items: center;
-  border-bottom: 1px solid var(--primary-txt-color);
-  grid-column: 1 / span 3;
 }

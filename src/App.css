@@ -37,7 +37,25 @@
 .App-content-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto;
   grid-gap: 2em;
   margin: 2em;
+}
+
+.App-dashboard-accounts {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.App-dashboard-bills {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.App-dashboard-profile {
+  grid-column-start: 2 / 3;
+  grid-row: 1 / 3;
+  justify-self: stretch;
+  align-self: stretch;
+  background: red;
 }

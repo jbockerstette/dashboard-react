@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import TitleBar from '../views/TitleBar';
+import FilterBar from '../views/FilterBar';
 import Panel from '../views/Panel';
 import './Accounts.css';
 import AccountRow from '../views/AccountRow';
@@ -12,7 +12,7 @@ class Accounts extends Component {
     const { accounts } = this.props;
     return (
       <Panel>
-        <TitleBar>My Accounts</TitleBar>
+        <FilterBar title="My Accounts" />
         {accounts.map(acc => (
           <AccountRow account={acc.account} isAvailable={acc.isAvailable} />
         ))}
