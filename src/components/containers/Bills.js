@@ -16,6 +16,7 @@ class Bills extends Component {
         <FilterBar title="My Bills" />
         {bills.map(bill => (
           <BillRow
+            key={bill.account}
             account={bill.account}
             paid={bill.paid}
             name={bill.name}

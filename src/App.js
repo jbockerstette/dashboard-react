@@ -33,7 +33,7 @@ class App extends Component {
           </Text>
         </header>
         <div>
-          <Avatar src={avatar} alt="Avatar" />
+          <Avatar src={avatar} />
           <Text>Hello Debra</Text>
         </div>
 

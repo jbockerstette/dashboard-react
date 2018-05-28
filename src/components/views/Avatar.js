@@ -3,18 +3,17 @@ import PropTypes from 'prop-types';
 import './Avatar.css';
 
 const Avatar = props => {
-  const { src, alt, large } = props;
+  const { src, large } = props;
   const cn = `Avatar ${large ? 'Avatar__large' : ''}`;
   return (
     <div className={cn}>
-      <img src={src} alt={alt} />
+      <img src={src} alt="avatar" />
     </div>
   );
 };
 
 Avatar.propTypes = {
   src: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
   large: PropTypes.bool
 };
 

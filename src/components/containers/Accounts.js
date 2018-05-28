@@ -14,7 +14,11 @@ class Accounts extends Component {
       <Panel>
         <FilterBar title="My Accounts" />
         {accounts.map(acc => (
-          <AccountRow account={acc.account} isAvailable={acc.isAvailable} />
+          <AccountRow
+            key={acc.account}
+            account={acc.account}
+            isAvailable={acc.isAvailable}
+          />
         ))}
       </Panel>
     );
