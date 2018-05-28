@@ -28,11 +28,41 @@ class Profile extends Component {
           <div className="Profile__avatar">
             <Avatar src={avatar} large />
           </div>
-          <input type="email" />
-          <input type="phone" />
-          <input type="text" />
-          <input type="password" />
-          <input type="text" />
+          <input
+            id="email"
+            name="email"
+            className="TextEdit"
+            type="email"
+            placeholder="Email"
+          />
+          <input
+            id="phoneNumber"
+            name="phoneNumber"
+            className="TextEdit"
+            type="tel"
+            placeholder="Phone number"
+          />
+          <input
+            id="city"
+            name="city"
+            className="TextEdit"
+            type="text"
+            placeholder="City"
+          />
+          <input
+            id="password"
+            name="password"
+            className="TextEdit"
+            type="password"
+            placeholder="Password"
+          />
+          <input
+            id="smsAlerts"
+            name="smsAlerts"
+            className="TextEdit"
+            type="text"
+            placeholder="SMS alerts"
+          />
           <div className="Profile__save">
             <IconButton color="red">Save</IconButton>
           </div>

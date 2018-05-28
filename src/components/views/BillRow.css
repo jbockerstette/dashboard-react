@@ -7,23 +7,23 @@
 }
 
 .BillRow__bill__paid {
-  color: lightgreen;
+  color: var(--green-accent-color);
   text-align: center;
 }
 
 .BillRow__bill__not__paid {
-  color: lightcoral;
+  color: var(--red-accent-color);
   text-align: center;
 }
 
 .BillRow__icon__paid {
-  background: lightgreen;
+  background: var(--green-accent-color);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .BillRow__icon__not__paid {
-  background: lightcoral;
+  background: var(--red-accent-color);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }

@@ -22,3 +22,17 @@
   align-self: center;
   justify-self: center;
 }
+
+.TextEdit {
+  font-size: inherit;
+  background: none;
+  border: none;
+  box-shadow: none;
+  border-bottom: solid 1px var(--disabled-txt-color);
+  padding-bottom: 8px;
+  color: var(--primary-txt-color);
+}
+
+.TextEdit:focus {
+  border-bottom: solid 1px var(--green-accent-color);
+}
