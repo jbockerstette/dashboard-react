@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import FilterBar from '../views/FilterBar';
 import Panel from '../views/Panel';
-import './Accounts.css';
 import AccountRow from '../views/AccountRow';
+import './Accounts.css';
 
 class Accounts extends Component {
   componentDidMount() {}

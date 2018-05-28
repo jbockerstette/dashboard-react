@@ -2,8 +2,12 @@
   display: inline;
   padding: 8px;
 }
-.Avatar__img {
+.Avatar img {
   height: 64px;
   border-radius: 50%;
   vertical-align: middle;
+}
+
+.Avatar__large img {
+  height: 128px;
 }
