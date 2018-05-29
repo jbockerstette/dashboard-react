@@ -17,13 +17,9 @@
 }
 
 .BillRow__icon__paid {
-  background: var(--green-accent-color);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--green-accent-color);
 }
 
 .BillRow__icon__not__paid {
-  background: var(--red-accent-color);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--red-accent-color);
 }

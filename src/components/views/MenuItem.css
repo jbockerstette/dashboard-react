@@ -1,6 +1,6 @@
 .Menu-item {
   color: var(--disabled-txt-color);
-  padding: 12px;
+  padding: 16px;
   text-decoration: none;
   cursor: pointer;
   list-style: none;
@@ -15,13 +15,9 @@
 }
 
 .Menu-item-icon {
-  background: var(--disabled-txt-color);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--disabled-txt-color);
 }
 
 .Menu-item-icon.selected {
-  background: linear-gradient(to bottom, #e72c83 0%, #a742c6 100%);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--red-accent-color);
 }

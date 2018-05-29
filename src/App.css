@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: auto 1fr auto;
   grid-template-rows: auto 1fr;
-  min-height: 100%;
   grid-gap: 1em;
   align-items: center;
   margin: 1em;
@@ -28,8 +27,6 @@
 .App-content {
   grid-column: 2 / span 2;
   grid-gap: 1em;
-  justify-self: stretch;
-  align-self: stretch;
   border-radius: 25px;
   background: var(--content-bg-color);
 }
@@ -55,6 +52,4 @@
 .App-dashboard-profile {
   grid-column-start: 2 / 3;
   grid-row: 1 / 3;
-  justify-self: stretch;
-  align-self: stretch;
 }
