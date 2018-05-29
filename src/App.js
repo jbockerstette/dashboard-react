@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { capitalize } from 'lodash';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
 import Avatar from './components/views/Avatar';
 import Text from './components/views/Text';
 import Menu from './components/views/Menu';
@@ -10,6 +10,11 @@ import Accounts from './components/containers/Accounts';
 import Bills from './components/containers/Bills';
 import logo from './logo.svg';
 import './App.css';
+import {
+  getUserFromLocalStorage,
+  setUserToLocalStorage,
+  getRandomHashFromLocalStorage
+} from './helpers/helpers';
 
 class App extends Component {
   constructor(props) {
@@ -23,11 +28,15 @@ class App extends Component {
 
   async componentDidMount() {
     try {
-      const results = await fetch('https://randomuser.me/api/?seed=foobar');
-      const data = await results.json();
+      let data = getUserFromLocalStorage();
+      if (!data) {
+        const seed = getRandomHashFromLocalStorage();
+        const results = await fetch(`https://randomuser.me/api/?seed=${seed}`);
+        data = await results.json();
+        setUserToLocalStorage(data);
+      }
       if (data.results.length > 0) {
         const [person] = data.results;
-        console.log(person);
         this.setState(() => ({
           person
         }));
@@ -72,6 +81,11 @@ class App extends Component {
 
           <div className="App-content">
             <div className="App-content-grid">
+              <Route
+                exact
+                path="/"
+                render={() => <Redirect to="/dashboard" />}
+              />
               <Route
                 path="/dashboard"
                 render={() => <Dashboard person={person} />}

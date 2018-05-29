@@ -9,7 +9,7 @@ class Menu extends Component {
   }
 
   handleClick(id) {
-    return function handleClick(e) {
+    return function handleClick() {
       this.props.onClick(id);
     }.bind(this);
   }
