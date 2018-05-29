@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import avatar from './uxceo-128.jpg';
-import './App.css';
+import { capitalize } from 'lodash';
 import Avatar from './components/views/Avatar';
 import Text from './components/views/Text';
 import Menu from './components/views/Menu';
@@ -9,20 +7,45 @@ import MenuItem from './components/views/MenuItem';
 import Accounts from './components/containers/Accounts';
 import Bills from './components/containers/Bills';
 import Profile from './components/containers/Profile';
+import logo from './logo.svg';
+import './App.css';
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { selection: 'My dashboard' };
+    this.state = {
+      selection: 'My dashboard',
+      person: null
+    };
     this.handleMenuSelected = this.handleMenuSelected.bind(this);
   }
-  componentDidMount() {}
+
+  async componentDidMount() {
+    try {
+      const results = await fetch('https://randomuser.me/api/?seed=foobar');
+      const data = await results.json();
+      if (data.results.length > 0) {
+        const [person] = data.results;
+        console.log(person);
+        this.setState(() => ({
+          person
+        }));
+      }
+    } catch (error) {
+      console.error(error);
+      this.setState(() => ({
+        error: 'Something went wrong.'
+      }));
+    }
+  }
+
   handleMenuSelected(id) {
     this.setState({ selection: id });
-    console.log(id);
   }
 
   render() {
+    const { person, selection } = this.state;
+    if (!person) return null;
     return (
       <div className="App-grid">
         <img src={logo} className="App-logo" alt="logo" />
@@ -33,11 +56,11 @@ class App extends Component {
           </Text>
         </header>
         <div>
-          <Avatar src={avatar} />
-          <Text>Hello Debra</Text>
+          <Avatar src={person.picture.medium} />
+          <Text>Hello {capitalize(person.name.first)}</Text>
         </div>
 
-        <Menu onClick={this.handleMenuSelected}>
+        <Menu selected={selection} onClick={this.handleMenuSelected}>
           <MenuItem iconSrc="dashboard" text="My dashboard" />
           <MenuItem iconSrc="account_box" text="Accounts" />
           <MenuItem iconSrc="smartphone" text="Mobile" />
@@ -54,7 +77,7 @@ class App extends Component {
               <Bills />
             </div>
             <div className="App-dashboard-profile">
-              <Profile />
+              <Profile person={person} />
             </div>
           </div>
         </div>

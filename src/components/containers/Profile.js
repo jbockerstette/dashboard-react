@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { capitalize } from 'lodash';
 import Panel from '../views/Panel';
 import TitleBar from '../views/TitleBar';
 import Text from '../views/Text';
 import Avatar from '../views/Avatar';
 import IconButton from '../views/IconButton';
-import avatar from '../../uxceo-128.jpg';
-
 import './Profile.css';
 
 class Profile extends Component {
   componentDidMount() {}
 
   render() {
+    const { person } = this.props;
+    if (!person) return null;
+    const city = `${capitalize(person.location.city)}, ${person.nat}`;
     return (
       <Panel>
         <div className="Profile">
@@ -26,7 +28,7 @@ class Profile extends Component {
             </Text>
           </div>
           <div className="Profile__avatar">
-            <Avatar src={avatar} large />
+            <Avatar src={person.picture.large} large />
           </div>
           <input
             id="email"
@@ -34,6 +36,7 @@ class Profile extends Component {
             className="TextEdit"
             type="email"
             placeholder="Email"
+            defaultValue={person.email}
           />
           <input
             id="phoneNumber"
@@ -41,6 +44,7 @@ class Profile extends Component {
             className="TextEdit"
             type="tel"
             placeholder="Phone number"
+            defaultValue={person.cell}
           />
           <input
             id="city"
@@ -48,6 +52,7 @@ class Profile extends Component {
             className="TextEdit"
             type="text"
             placeholder="City"
+            defaultValue={city}
           />
           <input
             id="password"
@@ -55,6 +60,7 @@ class Profile extends Component {
             className="TextEdit"
             type="password"
             placeholder="Password"
+            defaultValue={person.login.password}
           />
           <input
             id="smsAlerts"
@@ -62,6 +68,7 @@ class Profile extends Component {
             className="TextEdit"
             type="text"
             placeholder="SMS alerts"
+            defaultValue="SMS alerts activated"
           />
           <div className="Profile__save">
             <IconButton color="red">Save</IconButton>
@@ -72,6 +79,12 @@ class Profile extends Component {
   }
 }
 
-Profile.propTypes = {};
+Profile.propTypes = {
+  person: PropTypes.object
+};
+
+Profile.defaultProps = {
+  person: null
+};
 
 export default Profile;

@@ -5,20 +5,17 @@ import './Menu.css';
 class Menu extends Component {
   constructor(props) {
     super(props);
-    this.state = { selected: props.selected };
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick(id) {
     return function handleClick(e) {
-      this.setState({ selected: id });
       this.props.onClick(id);
     }.bind(this);
   }
 
   render() {
-    const { children } = this.props;
-    const { selected } = this.state;
+    const { children, selected } = this.props;
 
     return (
       <ul className="Menu">
