@@ -1,10 +1,12 @@
 .App-grid {
   display: grid;
   grid-template-columns: auto 1fr auto;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto 1fr auto;
   grid-gap: 1em;
   align-items: center;
-  margin: 1em;
+  padding: 1em;
+  align-content: stretch;
+  height: 100%;
 }
 
 .App-logo {
@@ -12,16 +14,8 @@
   justify-self: center;
 }
 
-.App-menu {
-  height: 48px;
-}
-
 .App-header {
   height: 64px;
-}
-
-.App-intro {
-  font-size: large;
 }
 
 .App-content {
