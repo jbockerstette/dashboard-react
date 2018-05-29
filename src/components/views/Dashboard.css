@@ -1,0 +1,14 @@
+.Dashboard-accounts {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.Dashboard-bills {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.Dashboard-profile {
+  grid-column-start: 2 / 3;
+  grid-row: 1 / 3;
+}

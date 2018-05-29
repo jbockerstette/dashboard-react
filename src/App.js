@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { capitalize } from 'lodash';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Avatar from './components/views/Avatar';
 import Text from './components/views/Text';
 import Menu from './components/views/Menu';
 import MenuItem from './components/views/MenuItem';
+import Dashboard from './components/views/Dashboard';
 import Accounts from './components/containers/Accounts';
 import Bills from './components/containers/Bills';
-import Profile from './components/containers/Profile';
 import logo from './logo.svg';
 import './App.css';
 
@@ -47,41 +48,40 @@ class App extends Component {
     const { person, selection } = this.state;
     if (!person) return null;
     return (
-      <div className="App-grid">
-        <img src={logo} className="App-logo" alt="logo" />
-        <header className="App-header">
-          <Text htmlTag="h3">My dashboard</Text>
-          <Text htmlTag="h5" color="secondary">
-            Welcome to Otis payment portal
-          </Text>
-        </header>
-        <div>
-          <Avatar src={person.picture.medium} />
-          <Text>Hello {capitalize(person.name.first)}</Text>
-        </div>
+      <Router>
+        <div className="App-grid">
+          <img src={logo} className="App-logo" alt="logo" />
+          <header className="App-header">
+            <Text htmlTag="h3">{selection}</Text>
+            <Text htmlTag="h5" color="secondary">
+              Welcome to Otis payment portal
+            </Text>
+          </header>
+          <div>
+            <Avatar src={person.picture.medium} />
+            <Text>Hello {capitalize(person.name.first)}</Text>
+          </div>
+          <Menu selected={selection} onClick={this.handleMenuSelected}>
+            <MenuItem to="/dashboard" iconSrc="dashboard" text="My dashboard" />
+            <MenuItem to="/accounts" iconSrc="account_box" text="Accounts" />
+            <MenuItem to="/dashboard" iconSrc="smartphone" text="Mobile" />
+            <MenuItem to="/bills" iconSrc="event_note" text="Bills" />
+            <MenuItem to="/dashboard" iconSrc="message" text="Complaints" />
+            <MenuItem to="/dashboard" iconSrc="phone" text="Customer Care" />
+          </Menu>
 
-        <Menu selected={selection} onClick={this.handleMenuSelected}>
-          <MenuItem iconSrc="dashboard" text="My dashboard" />
-          <MenuItem iconSrc="account_box" text="Accounts" />
-          <MenuItem iconSrc="smartphone" text="Mobile" />
-          <MenuItem iconSrc="event_note" text="Bills" />
-          <MenuItem iconSrc="message" text="Complaints" />
-          <MenuItem iconSrc="phone" text="Customer Care" />
-        </Menu>
-        <div className="App-content">
-          <div className="App-content-grid">
-            <div className="App-dashboard-accounts">
-              <Accounts />
-            </div>
-            <div className="App-dashboard-bills">
-              <Bills />
-            </div>
-            <div className="App-dashboard-profile">
-              <Profile person={person} />
+          <div className="App-content">
+            <div className="App-content-grid">
+              <Route
+                path="/dashboard"
+                render={() => <Dashboard person={person} />}
+              />
+              <Route path="/accounts" render={() => <Accounts />} />
+              <Route path="/bills" render={() => <Bills />} />
             </div>
           </div>
         </div>
-      </div>
+      </Router>
     );
   }
 }
