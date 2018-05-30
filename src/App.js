@@ -15,6 +15,7 @@ import {
   setUserToLocalStorage,
   getRandomHashFromLocalStorage
 } from './helpers/helpers';
+import FadeIn from './components/views/FadeIn';
 
 class App extends Component {
   constructor(props) {

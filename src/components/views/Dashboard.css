@@ -1,6 +1,7 @@
 .Dashboard-accounts {
   grid-column: 1;
   grid-row: 1;
+  transition: height 500ms 0ms, opacity 500ms 500ms;
 }
 
 .Dashboard-bills {
