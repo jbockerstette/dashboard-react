@@ -91,8 +91,26 @@ class App extends Component {
                 path="/dashboard"
                 render={() => <Dashboard person={person} />}
               />
-              <Route path="/accounts" render={() => <Accounts />} />
-              <Route path="/bills" render={() => <Bills />} />
+              <Route
+                path="/accounts"
+                render={() => (
+                  <div className="App-content-full-width">
+                    <FadeIn>
+                      <Accounts />
+                    </FadeIn>
+                  </div>
+                )}
+              />
+              <Route
+                path="/bills"
+                render={() => (
+                  <div className="App-content-full-width">
+                    <FadeIn>
+                      <Bills />
+                    </FadeIn>
+                  </div>
+                )}
+              />
             </div>
           </div>
         </div>
