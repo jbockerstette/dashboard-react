@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AccountRow renders correctly when is available 1`] = `
+<div
+  className="AccountRow"
+>
+  <div>
+    <span
+      className="Text-title Text--primary "
+    >
+      1-123-123-1234
+    </span>
+    <div
+      className="Text-title Text--primary Text--small"
+    >
+      Available
+    </div>
+  </div>
+  <div>
+    <button
+      className="Btn Btn--red"
+      onClick={null}
+    >
+      Edit
+    </button>
+  </div>
+</div>
+`;
+
+exports[`AccountRow renders correctly when not available 1`] = `
+<div
+  className="AccountRow"
+>
+  <div>
+    <span
+      className="Text-title Text--disabled "
+    >
+      1-123-123-1234
+    </span>
+    <div
+      className="Text-title Text--disabled Text--small"
+    >
+      Not Available
+    </div>
+  </div>
+  <div>
+    <button
+      className="Btn Btn--red"
+      onClick={null}
+    >
+      Delete
+    </button>
+  </div>
+</div>
+`;

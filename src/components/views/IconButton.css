@@ -22,11 +22,47 @@
   color: var(--secondar-txt-color);
 }
 
+.Btn--red:hover {
+  background: linear-gradient(
+    to bottom right,
+    rgb(105, 101, 44) 0%,
+    rgb(139, 41, 41) 100%
+  );
+  color: var(--secondar-txt-color);
+}
+
+.Btn--red:active {
+  background: linear-gradient(
+    to bottom right,
+    rgb(165, 161, 108) 0%,
+    rgb(211, 86, 86) 100%
+  );
+  color: var(--secondar-txt-color);
+}
+
 .Btn--green {
   background: linear-gradient(
     to bottom right,
     rgb(105, 101, 44) 0%,
     var(--green-accent-color) 100%
+  );
+  color: var(--secondar-txt-color);
+}
+
+.Btn--green:hover {
+  background: linear-gradient(
+    to bottom right,
+    rgb(105, 101, 44) 0%,
+    green 100%
+  );
+  color: var(--secondar-txt-color);
+}
+
+.Btn--green:active {
+  background: linear-gradient(
+    to bottom right,
+    rgb(170, 165, 91) 0%,
+    rgb(68, 131, 68) 100%
   );
   color: var(--secondar-txt-color);
 }
