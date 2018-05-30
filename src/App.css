@@ -38,3 +38,18 @@
   grid-column: 1 / -1;
   grid-row: 1 / -1;
 }
+.App-dashboard-accounts {
+  grid-column: 1;
+  grid-row: 1;
+  transition: height 500ms 0ms, opacity 500ms 500ms;
+}
+
+.App-dashboard-bills {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.App-dashboard-profile {
+  grid-column-start: 2 / 3;
+  grid-row: 1 / 3;
+}

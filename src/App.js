@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import { capitalize } from 'lodash';
-import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import Avatar from './components/views/Avatar';
 import Text from './components/views/Text';
 import Menu from './components/views/Menu';
 import MenuItem from './components/views/MenuItem';
-import Dashboard from './components/views/Dashboard';
-import Accounts from './components/containers/Accounts';
-import Bills from './components/containers/Bills';
+import Routes from './components/views/Routes';
 import logo from './logo.svg';
 import './App.css';
 import {
@@ -15,7 +13,6 @@ import {
   setUserToLocalStorage,
   getRandomHashFromLocalStorage
 } from './helpers/helpers';
-import FadeIn from './components/views/FadeIn';
 
 class App extends Component {
   constructor(props) {
@@ -82,35 +79,7 @@ class App extends Component {
 
           <div className="App-content">
             <div className="App-content-grid">
-              <Route
-                exact
-                path="/"
-                render={() => <Redirect to="/dashboard" />}
-              />
-              <Route
-                path="/dashboard"
-                render={() => <Dashboard person={person} />}
-              />
-              <Route
-                path="/accounts"
-                render={() => (
-                  <div className="App-content-full-width">
-                    <FadeIn>
-                      <Accounts />
-                    </FadeIn>
-                  </div>
-                )}
-              />
-              <Route
-                path="/bills"
-                render={() => (
-                  <div className="App-content-full-width">
-                    <FadeIn>
-                      <Bills />
-                    </FadeIn>
-                  </div>
-                )}
-              />
+              <Routes person={person} />
             </div>
           </div>
         </div>
