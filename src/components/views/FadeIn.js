@@ -25,9 +25,6 @@ class FadeIn extends Component {
 
   render() {
     const { transitionDuration, children } = this.props;
-    React.Children.map(children, (child, i) =>
-      console.log(child.props.className)
-    );
     return (
       <React.Fragment>
         {React.Children.map(children, (child, i) => (
