@@ -14,6 +14,8 @@ import {
   getRandomHashFromLocalStorage
 } from './helpers/helpers';
 
+const Logo = () => <img src={logo} className="App-logo" alt="logo" />;
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -57,7 +59,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App-grid">
-          <img src={logo} className="App-logo" alt="logo" />
+          <Logo />
           <header className="App-header">
             <Text htmlTag="h3">{selection}</Text>
             <Text htmlTag="h5" color="secondary">
