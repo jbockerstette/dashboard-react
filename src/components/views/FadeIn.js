@@ -25,21 +25,25 @@ class FadeIn extends Component {
 
   render() {
     const { transitionDuration, children } = this.props;
+    React.Children.map(children, (child, i) =>
+      console.log(child.props.className)
+    );
     return (
-      <div>
+      <React.Fragment>
         {React.Children.map(children, (child, i) => (
           <div
             style={{
               transition: `opacity ${transitionDuration}ms, top ${transitionDuration}ms`,
               position: 'relative',
               top: this.state.maxIsVisible > i ? 0 : 20,
-              opacity: this.state.maxIsVisible > i ? 1 : 0
+              opacity: this.state.maxIsVisible > i ? 1 : 0,
+              height: '100%'
             }}
           >
             {child}
           </div>
         ))}
-      </div>
+      </React.Fragment>
     );
   }
 }

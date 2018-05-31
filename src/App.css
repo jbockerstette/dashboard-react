@@ -29,9 +29,10 @@
 .App-content-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
+  grid-template-rows: auto 1fr;
   grid-gap: 2em;
-  margin: 2em;
+  padding: 2em;
+  height: 100%;
 }
 
 .App-content-full-width {
@@ -41,7 +42,6 @@
 .App-dashboard-accounts {
   grid-column: 1;
   grid-row: 1;
-  transition: height 500ms 0ms, opacity 500ms 500ms;
 }
 
 .App-dashboard-bills {
